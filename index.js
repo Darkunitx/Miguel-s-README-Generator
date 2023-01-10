@@ -1,9 +1,12 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-
 const generateREADME = ({ Title, Description, installation, guidelines, test }) =>
-  `README`;
+  `${Title}
+   ${Description}
+   ${installation}
+   ${guidelines}
+   ${test}`;
 
 inquirer
   .prompt([
