@@ -1,15 +1,38 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const generateREADME = ({ Title, Description, installation, guidelines, test, Badge, username, email }) =>
-  `${Title}
+const generateREADME = ({ Title, Description, installation, credits, contributions, test, Badge, username, email }) =>
+  `# ${Title}
+
+   ## Description
    ${Description}
+   
+   ## Table of Contents
+   - [Description](#description)
+   - [Installation](#installation)
+   - [Tests](#tests)
+   - [Credits](#credits)
+   - [How to Contribute](#How to contribute)
+   - [Badge](#badge)
+   - [Questions](#questions)
+
+   ## Installation
    ${installation}
-   ${guidelines}
+
+   ## Tests
    ${test}
+
+   ## Credits
+   ${credits}
+
+   ## How to Contribute
+   ${contributions}
+
+   ## Badge
    ${Badge}
-   (https://github.com/${username}
-   ${email}`;
+
+   ## Questions
+   If you have any further questions please follow up with me at: (https://github.com/${username} or you can email me at ${email}`;
 
 inquirer
   .prompt([
@@ -29,14 +52,19 @@ inquirer
       message: 'What are the installation instructions?',
     },
     {
+        type: 'input',
+        name: 'credits',
+        message: 'What contributions were made to this project?',
+      },
+    {
       type: 'input',
-      name: 'guidelines',
-      message: 'What are the contribution guidelines?',
+      name: 'contributions',
+      message: 'If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so.',
     },
     {
       type: 'input',
       name: 'test',
-      message: 'Please write instructions for testing.',
+      message: 'What tests have been run?',
     },
     {
         type: 'list',
