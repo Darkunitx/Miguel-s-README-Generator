@@ -12,7 +12,7 @@ const generateREADME = ({ Title, Description, installation, credits, contributio
    - [Installation](#installation)
    - [Tests](#tests)
    - [Credits](#credits)
-   - [How to Contribute](#How to contribute)
+   - [How to Contribute](#ContributionGuidelines)
    - [Badge](#badge)
    - [Questions](#questions)
 
@@ -25,14 +25,14 @@ const generateREADME = ({ Title, Description, installation, credits, contributio
    ## Credits
    ${credits}
 
-   ## How to Contribute
+   ## ContributionGuidelines
    ${contributions}
 
    ## Badge
    ${Badge}
 
    ## Questions
-   If you have any further questions please follow up with me at: (https://github.com/${username} or you can email me at ${email}`;
+   If you have any further questions please follow up with me at: https://github.com/${username} or you can email me at ${email}`;
 
 inquirer
   .prompt([
@@ -70,7 +70,7 @@ inquirer
         type: 'list',
         name: 'Badge',
         message: 'Please choose the License for your application',
-        choices: (['MIT License [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)', 'Apache 2.0 License [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)', 'BSD License [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause) [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)', 'Unlicense [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)'])
+        choices: (['MIT License:   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)', 'Apache 2.0 License:   [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)', 'BSD License:   [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause) [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)', 'Unlicense:   [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)'])
       },
       {
         type: 'input',
